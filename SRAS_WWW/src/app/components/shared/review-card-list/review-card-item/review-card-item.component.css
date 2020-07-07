@@ -1,0 +1,148 @@
+/* base */
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 24px;
+  color: #00230e;
+  font-family: "Noto Sans KR", sans-serif;
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+img {
+  border: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0px;
+}
+address {
+  font-style: normal;
+}
+fieldset {
+  border: none;
+}
+legend {
+  position: absolute;
+  left: -999em;
+}
+input[type="button"],
+input[type="submit"],
+input[type="ressrt"],
+input[type="image"],
+button {
+  cursor: pointer;
+}
+label.away {
+  position: absolute;
+  left: -999em;
+}
+
+.ReviewCard {
+  width: 100%;
+  height: 200px;
+  border-radius: 15px;
+  background-color: #fff;
+  box-shadow: 0 6px 6px rgba(0, 0, 0, 0.2);
+  margin-bottom: 20px;
+}
+.ReviewCard .cardInner {
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  height: 200px;
+  padding: 20px 0;
+}
+.ReviewCard .cardInner .cardInnerContent {
+  display: block;
+  float: left;
+  box-sizing: border-box;
+  border-left: 1px solid #e0e0e0;
+  height: 100%;
+  padding: 0 10px;
+  color: #666;
+}
+.cardInner .os,
+.date,
+.worker,
+.state {
+  width: 7.5%;
+  text-align: center;
+  font-size: 13px;
+  line-height: 160px;
+  font-weight: bold;
+}
+.cardInner .tag {
+  width: 10%;
+  height: 100%;
+  text-align: center;
+  font-size: 13px;
+  line-height: 160px;
+  font-weight: bold;
+}
+.cardInner .review,
+.reply {
+  overflow: auto;
+  width: 30%;
+  font-size: 12px;
+  line-height: 16px;
+}
+.cardInner .os {
+  border: none !important;
+}
+.detailTagContent {
+  width: 100%;
+  height: 400px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  padding: 0;
+}
+.detailTagContent {
+    width: 80%;
+    height: 100%;
+}
+.detailTagContent li {
+  display: block;
+  width: 100%;
+  height: 20px;
+  float: left;
+  background-color: #f6f6f6;
+  border-radius: 10px;
+  font-size: 11px;
+  text-align: center;
+  line-height: 20px;
+  color: #666;
+  margin: 7.5px 1.665%;
+  font-weight: 500;
+  
+}
+.android {
+  display: block;
+  margin: 0 auto;
+  margin-top: 50px;
+  width: 40px;
+  height: 50px;
+  overflow: hidden;
+  background-image: url(/assets/images/icon_os.png);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+.ios {
+  display: block;
+  margin: 0 auto;
+  margin-top: 50px;
+  width: 40px;
+  height: 50px;
+  overflow: hidden;
+  background-image: url(/assets/images/icon_os.png);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: 0 -50px;
+}
+.cardInner .state {
+  padding: 0 !important;
+}

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SRAS</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="js/jquery-3.4.1.min.js"></script>
+    
+    <!-- made -->
+    <script src="js/main.js"></script>
+</head>
+<body>
+    <header>
+        <div class="headerLogoWrap"><a href="main.html" class="mainLogo" ><img src="images/main_logo.png" alt="home"/></a></div>
+        <div class="headerMainWrap">
+            <ul class="mainNav">
+                <li class="mainNav01"><a href="#">리뷰관리</a></li>
+                <li class="mainNav02"><a href="#">주간통계</a></li>
+                <li class="mainNav03"><a href="#">대응매뉴얼</a></li>
+            </ul>
+            <ul class="mainIcon">
+                <li class="mainIcon01"><a href="search.html"><img src="images/icon_search.png"/></a></li>
+                <li class="mainIcon02"><a href="#"><img src="images/icon_mypage.png"/></a></a></li>
+                <li class="mainIcon03"><a href="#"><img src="images/icon_help.png"/></a></a></li>
+            </ul>
+        </div>
+    </header>
+    <section>
+        <div class="detailSectionOuterWrap">
+            <div class="detailSectionWrap">
+                <div class="detailSectionTop">리뷰관리 | Detail</div>
+                <div class="detailCardTitle">
+                    <div>댓글</div>
+                    <div class="detailTagTitle">분류</div>
+                    <div>답글</div>
+                </div>
+                <div class="detailSectionMain">
+                    <div class="detailReviewCard detailCard">
+                        <!--<div class="detailReviewInner detailCardInner"></div>-->
+                        <div class="detailReviewCardContent">
+                            오픈뱅킹 만들려는데 왜 전화인증만 하면 앱이 다시 시작해서 인증완료가 안될까요? 전화를 끝까지 들어도 그렇고 제가 먼저 끊어도 계속 전화인증 확인 전에 앱이 다시시작해서 오픈뱅킹을 못만들어요. 그리고 처음 비밀번호 만들고 로그인할때 제가 자동로그인 선택을 못하고 넘어가서 설정 들어가서 바꾸려니까 그건 로그인 화면에서 가능하다고 하던데 로그인 화면에는 자동로그인 선택이 다시 뜨지 않아요. 자동로그인 어떻게 할 수 있나요? 
+                        </div>
+                        <div class="detailReviewCardDetail">
+                            <ul class="detail01 detail">
+                                <li><span class="span01">OS</span><span class="span02">android</span></li>
+                                <li><span class="span01">OS버전</span><span class="span02">28</span></li>
+                                <li><span class="span01">별점</span><span class="span02">2/5</span></li>
+                                <li><span class="span01">댓글작성</span><span class="span02">03.01</span></li>
+                            </ul>
+                            <ul class="detail02 detail">
+                                <li><span class="span01">기기</span><span class="span02">Note9</span></li>
+                                <li><span class="span01">앱버전</span><span class="span02">1.14.1</span></li>
+                                <li><span class="span01">담당자</span><span class="span02">-</span></li>
+                                <li><span class="span01">승인요청</span><span class="span02">-</span></li>
+                            </ul>
+                            <ul class="detail03 detail">
+                                <li><span class="span01">제조사</span><span class="span02">samsung</span></li>
+                                <li><span class="span01">빌드번호</span><span class="span02">1424</span></li>
+                                <li><span class="span01">처리상태</span><span class="span02">미처리</span></li>
+                                <li><span class="span01">승인완료</span><span class="span02">-</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="detailTagCard detailCard">          <!-- 긍부정 판단 패널 -->                                                      
+                        <div class="detailTagInner proConTitle ">긍/부정 판단</div>
+                        <div class="detailTagInner proConButtonWrap">
+                            <div class="proConButton">
+                                <div class="proButton">긍정</div>
+                                <div class="conButton">부정</div>
+                            </div>
+                        </div>
+                        <div class="detailTagInstruction">
+                            긍정댓글인 경우 [긍정] > [확인] 선택시<br/>
+                            우측 하단 [SAVE]버튼이 바로 활성화되며<br/>
+                            답글을 달지 않아도 됩니다.<br/><br/>
+                            부정댓글인 경우 [부정] > [확인] 선택시<br/>
+                            태그, 답글 기능이 활성화되며<br/>
+                            각 메뉴에서 태그 선택/답글 작성 완료 후<br/>
+                            우측 하단 [SAVE]버튼을 누르면 됩니다.<br/><br/>
+                            [SAVE]버튼 클릭시 승인요청이 완료됩니다.
+                        </div>
+                        <div class="detailTagConfirmButton">
+                            <div class="confirmButton">확인</div>
+                        </div>
+                    </div>
+                    <div class="detailTagCard2 detailCard">          <!-- 태그 패널 --> 
+                        <ul class="detailTagContent">
+                            <li># 오픈뱅킹</li>
+                            <li># 지문인증</li>
+                            <li># 간편이체</li>
+                            <li># 자동로그인</li>
+                            <li># 바이오인증</li>
+                            <li># 비대면실명인증</li>
+                            <li># 공인인증서</li>
+                            <li># 모바일 OTP</li>
+                            <li># 속도</li>
+                            <li># face id</li>
+                            <li># 해외유심</li>
+                            <li># 재설치</li>
+                            <li># 무한로딩</li>
+                            <li># 업데이트</li>
+                            <li># 강제종료</li>
+                            <li># 계좌개설</li>
+                            <li># 인증번호</li>
+                        </ul> 
+                        <div class="detailTagAdd">
+                            <div class="detailTagAddTitle">직접추가</div>
+                            <form>
+                                <input type="text" class="detailTagAddInput">
+                                <button class="detailTagAddButton">Add</button>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="detailReplyCard detailCard">
+                        <div class="detailReplyInner detailCardInner">'부정'을 선택하면 활성화됩니다.</div>
+                        <div class="detailReplyCardActivated">
+                            <ul class="detailReplyNav">
+                                <li class="detailReplyNavItem replyItem01">오류발생</li>
+                                <li class="detailReplyNavItem">개선사항</li>
+                                <li class="detailReplyNavItem">단순불만</li>
+                                <li class="detailReplyNavItem replyItem04">자유양식</li>
+                            </ul>
+                            <ul class="detailReplyTemplate li01">       
+                                <li class="detailReplyTemplateItem on">
+                                    <ul class="detailReplyTemplateChioce">
+                                        <li class="on">1</li>
+                                        <li>2</li>
+                                    </ul>
+                                    <ul class="detailReplyTemplateChioceContent">
+                                        <li>
+                                            안녕하세요. 신한은행입니다.<br/>SOL 이용에 불편을 드려 죄송합니다.
+                                            <textarea></textarea>
+                                            위 방법으로 문제가 해결되지 않는 경우 다음 정보를 고객센터(1599-8000) 또는 이메일(developer@shinhan.com)를 통해 전달해주시면 확인후 답변드리겠습니다. **(기종, OS정보, 고객번호, 휴대폰번호, 오류화면 캡처)
+                                            <br/><br/>고객님께 더 나은 서비스를 제공할 수 있도록 노력하겠습니다.
+                                            <br/>감사합니다.
+                                        </li>
+                                    </ul>
+                                </li>
+                                
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="detailSectionButton">
+                    <div class="buttonSave detailButton">Save</div>
+                    <div class="buttonBack detailButton">Back</div>
+                </div>
+            </div>
+        </div>
+        <div class="commentSectionOuterWrap">
+            <div class="commentSectionWrap">
+                <div class="commentSectionTop">코멘트 달기 (2)</div>
+                <div class="commentSectionInput">
+                    <textarea class="commentSectionTextarea"></textarea>
+                    <button class="commentConfirmButton">등록</button>
+                </div>
+                <div class="commentsList">
+                    <div class="commentInfo">
+                        <div class="commentWriter">이소라</div>
+                        <div class="commentCreated">2020.03.02</div>
+                    </div>
+                    <div class="commentContent">A1011번 리뷰 검색해보세요! 유사한 사례같습니다.</div>
+                </div>
+                <div class="commentsList">
+                    <div class="commentInfo">
+                        <div class="commentWriter">이지민</div>
+                        <div class="commentCreated">2020.03.02</div>
+                    </div>
+                    <div class="commentContent">~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

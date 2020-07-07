@@ -1,0 +1,9 @@
+<div [className]="'commentsList'">
+  <div [className]="'commentInfo'">
+      <div [className]="'commentWriter'">{{comment.userId }}
+        <!-- TODO : 나중에 userId->userName api 생기는 대로 userName으로 바꿔줄 것 -->
+      </div>
+      <div [className]="'commentCreated'">{{getDateString(comment.commentDate)}}</div>
+  </div>
+  <div [className]="'commentContent'">{{comment.comment}}</div>
+</div>

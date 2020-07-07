@@ -1,0 +1,31 @@
+<header>
+  <div [className]="'headerLogoWrap'">
+    <a href="/" [className]="'mainLogo'">
+      <img [src]="logoIconSrc" alt="home" />
+    </a>
+  </div>
+  <div [className]="'headerMainWrap'">
+    <ul [className]="'mainNav'">
+      <li [routerLink]="['/', 'review']" routerLinkActive="on">
+        <a [routerLink]="['/', 'review']" routerLinkActive="on"> 리뷰관리</a>
+      </li>
+      <li [routerLink]="['/', 'stat']" routerLinkActive="on">
+        <a [routerLink]="['/', 'stat']" routerLinkActive="on">주간통계</a>
+      </li>
+      <li [routerLink]="['/', 'manual']" routerLinkActive="on">
+        <a [routerLink]="['/', 'manual']" routerLinkActive="on">대응매뉴얼</a>
+      </li>
+    </ul>
+    <ul [className]="'mainIcon'">
+      <li [className]="'mainIcon01'" (click)="onClickLogoutButton()">
+        <a><img [src]="logoutIconSrc" /></a>
+      </li>
+      <li [className]="'mainIcon02'">
+        <a [routerLink]="'/search'"><img [src]="searchIconSrc" /></a>
+      </li>
+      <li [className]="'mainIcon03'">
+        <a [routerLink]="'/'"><img [src]="helpIconSrc" /></a>
+      </li>
+    </ul>
+  </div>
+</header>

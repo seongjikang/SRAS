@@ -1,0 +1,26 @@
+<body>
+  <div class="searchSection">
+    <div class="serachBackWrap">
+      <a [routerLink]="['/', 'review']" class="backIcon" >
+        <img src="../../../assets/images/icon_back.png" alt="back"/>
+      </a>
+    </div>
+    <div class="searchWrap">
+      <div class="searchTitle">SEARCH</div>
+      <app-search-panel
+          (tagDeleteEvent)="tagDeleteTransmission($event)"
+          [setClickedTag]="clickedTag">
+      </app-search-panel>
+      <div class="searchOption">
+        <div class="searchOptionInner">
+          <div class="searchOptionTitle">태그로 검색</div>
+          <app-tag-list 
+              (tagClickedEvent)="onTagClicked($event)"
+              [setDeletedTag]="deletedTag">
+          </app-tag-list>
+        </div>
+        <app-keyword-recommend></app-keyword-recommend>  
+      </div>
+    </div>
+  </div>  
+</body>

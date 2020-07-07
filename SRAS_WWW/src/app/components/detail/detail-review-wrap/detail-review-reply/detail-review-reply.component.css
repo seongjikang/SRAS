@@ -1,0 +1,200 @@
+@import url("https://fonts.googleapis.com/css?family=Noto+Sans+KR");
+
+/* custom */
+
+/* base */
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 24px;
+  color: #00230e;
+  font-family: "Noto Sans KR", sans-serif;
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+img {
+  border: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0px;
+}
+address {
+  font-style: normal;
+}
+fieldset {
+  border: none;
+}
+legend {
+  position: absolute;
+  left: -999em;
+}
+input[type="button"],
+input[type="submit"],
+input[type="ressrt"],
+input[type="image"],
+button {
+  cursor: pointer;
+}
+label.away {
+  position: absolute;
+  left: -999em;
+}
+
+/*layout*/
+header {
+  position: fixed;
+  z-index: 5000;
+  width: 100%;
+  height: 70px;
+  min-width: 1200px;
+  background-color: #2a69ff;
+  box-shadow: 0 6px 6px rgba(0, 0, 0, 0.2);
+}
+section {
+  width: 100%;
+  min-height: 1200px;
+  overflow: hidden;
+  min-width: 1200px;
+  background-color: #fafafa;
+  padding-bottom: 30px;
+}
+
+.detailCard {
+  float: left;
+  background-color: #fff;
+  border-radius: 15px;
+  width: calc(38% - 10px);
+  height: 100%;
+  box-shadow: 0 6px 6px rgba(0, 0, 0, 0.2);
+  padding: 25px;
+  box-sizing: border-box;
+  font-size: 13px;
+  line-height: 20px;
+  color: #666;
+}
+
+/* 답글 패널 */
+.detailReplyCard {
+  background-color: #999;
+}
+.detailReplyInner .notKnowNegative {
+  display: block;
+  color: #fff;
+  font-size: 20px;
+  text-align: center;
+  line-height: 420px;
+}
+
+/* 답글 패널 */
+.detailReplyCard {
+  background-color: #999;
+  position: relative;
+}
+.detailReplyInner {
+  color: #fff;
+  font-size: 20px;
+  text-align: center;
+  line-height: 420px;
+}
+.detailReplyCardActivated {
+  position: absolute;
+  width: 100%;
+  height: 500px;
+  top: 0;
+  left: 0;
+}
+.detailReplyNav {
+  width: 100%;
+  height: 35px;
+}
+.detailReplyNav li {
+  cursor: pointer;
+  display: block;
+  width: 25%;
+  height: 35px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  float: left;
+  line-height: 35px;
+  color: #fff;
+  text-align: center;
+  font-size: 14px;
+}
+.detailReplyNav li.on {
+  color: #2a69ff;
+  background-color: #fff;
+  font-weight: bold;
+}
+
+.detailReplyTemplate {
+  width: 100%;
+  height: 465px;
+  background-color: #fff;
+  border-radius: 15px;
+}
+.detailReplyTemplate.li01 {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+.detailReplyTemplate.li04 {
+  border-top-right-radius: 0;
+}
+.detailReplyTemplate > li {
+  width: 100%;
+  height: 465px;
+}
+
+.detailReplyTemplateItem {
+  padding: 15px 25px;
+  box-sizing: border-box;
+}
+.detailReplyTemplateChioce {
+  width: 100%;
+  height: 20px;
+  margin-bottom: 10px;
+}
+.detailReplyTemplateChioce > li {
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  display: block;
+  float: left;
+  margin-right: 15px;
+  background-color: #999;
+  border-radius: 10px;
+  line-height: 20px;
+  font-weight: bold;
+  text-align: center;
+  font-size: 14px;
+  color: #fff;
+}
+.detailReplyTemplateChioce > li.on {
+  background-color: #2a69ff;
+}
+
+.detailReplyTemplateChioceContent > li {
+  color: #666;
+  font-size: 13px;
+  line-height: 20px;
+  text-align: left;
+}
+.detailReplyTemplateChioceContent > li > span {
+  color: #666;
+  font-size: 13px;
+  line-height: 20px;
+  text-align: left;
+}
+.detailReplyTemplateChioceContent > li > textarea {
+  width: 100%;
+  height: 200px;
+  margin: 5px 0;
+  font-size: 13px;
+  line-height: 20px;
+  border-radius: 10px;
+  margin-top: 10px;
+}

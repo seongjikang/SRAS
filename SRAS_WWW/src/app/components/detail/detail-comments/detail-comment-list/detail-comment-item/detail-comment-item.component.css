@@ -1,0 +1,19 @@
+/* base */
+*{ margin: 0; padding: 0; font-size: 24px; color: #00230e; font-family: 'Noto Sans KR', sans-serif; }
+html, body{ width: 100%; height: 100%; }
+li{ list-style: none; }
+a{ text-decoration: none; }
+img{ border: none;}
+table{ border-collapse: collapse; border-spacing: 0px; }
+address{ font-style: normal; }
+fieldset{ border: none; }
+legend{ position: absolute; left: -999em; }
+input[type=button],input[type=submit],input[type=ressrt],input[type=image],button{ cursor:pointer; }
+label.away{ position: absolute; left: -999em; }
+form *{ border: none; }
+
+.commentsList{ width: 100%; height: 150px; box-sizing: border-box; padding: 20px 10px; border-top: 1px solid #999; }
+.commentsList .commentInfo{ width: 100%; height: 20px; margin-bottom: 15px; }
+.commentsList .commentInfo .commentWriter{ float: left; width: 50%; font-size: 16px; color: #333; }
+.commentsList .commentInfo .commentCreated{ float: right; width: 50%; font-size: 16px; text-align: right; line-height: 20px; }
+.commentsList .commentContent{ overflow: auto; width: 100%; height: 75px; font-size: 12px; color: #666; }

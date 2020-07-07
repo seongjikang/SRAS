@@ -1,0 +1,98 @@
+/* base */
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 24px;
+  color: #00230e;
+  font-family: "Noto Sans KR", sans-serif;
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+img {
+  border: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0px;
+}
+address {
+  font-style: normal;
+}
+fieldset {
+  border: none;
+}
+legend {
+  position: absolute;
+  left: -999em;
+}
+input[type="button"],
+input[type="submit"],
+input[type="ressrt"],
+input[type="image"],
+button {
+  cursor: pointer;
+}
+label.away {
+  position: absolute;
+  left: -999em;
+}
+form * {
+  border: none;
+}
+
+.commentSectionTop {
+  width: 100%;
+  height: 40px;
+  margin-bottom: 10px;
+  height: 40px;
+  font-size: 20px;
+  color: #333;
+}
+.rejectInputHighlight {
+  color: #ff2a64;
+}
+.commentSectionInput {
+  position: relative;
+  width: 100%;
+  height: 150px;
+  border-radius: 15px;
+  background-color: #f6f6f6;
+  margin-bottom: 40px;
+}
+.commentSectionTop2 {
+  width: 100%;
+  height: 40px;
+  margin-bottom: 10px;
+  height: 40px;
+  font-size: 20px;
+  color: #333;
+}
+.commentSectionTextarea {
+  width: 95%;
+  border-radius: 20px;
+  height: 150px;
+  background-color: #f6f6f6;
+  display: block;
+  border: none;
+  padding: 15px 50px 15px 15px;
+  box-sizing: border-box;
+  font-size: 18px;
+}
+.commentConfirmButton {
+  position: absolute;
+  bottom: 7px;
+  right: 15px;
+  border: none;
+  background-color: #f6f6f6;
+  font-size: 18px;
+  color: #666;
+}

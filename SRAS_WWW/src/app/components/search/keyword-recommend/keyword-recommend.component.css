@@ -1,0 +1,5 @@
+.searchOptionInner{ width: 50%; float: left;}
+.searchOptionTitle{ color: #2A69FF; text-align: center; font-size: 18px;  margin-bottom: 20px; } 
+
+.searchOptionInner .searchOptionContent li{ cursor: pointer; display: block; margin: 10px 2.5px; width: 95px; height: 20px; float: left; background-color: #f6f6f6; border-radius: 10px; font-size: 11px; text-align: center; line-height: 20px; color: #666; }
+.searchOptionInner .searchOptionContent li.on{ background-color: #2A69FF; color: #fff; }

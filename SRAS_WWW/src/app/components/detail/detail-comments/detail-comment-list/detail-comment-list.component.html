@@ -1,0 +1,6 @@
+<ul>
+<!-- (scroll)="onScrollWindows($event)"> -->
+  <li *ngFor="let comment of comments" [className]="'commentsList'">
+    <app-detail-comment-item [comment]="comment"></app-detail-comment-item>
+  </li>
+</ul>

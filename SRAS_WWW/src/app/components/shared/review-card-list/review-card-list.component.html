@@ -1,0 +1,137 @@
+<section>
+  <div [className]="'sectionWrap'">
+    <div [className]="'sectionTop'">
+      <div [className]="'sectionTopLeft'" *ngIf="this.isSearchRes == true">검색결과</div>
+      <div [className]="'sectionTopLeft'" *ngIf="this.isSearchRes == false">리뷰관리</div>
+      <div [className]="'sectionTopRight'" (scroll)="onWindowScroll($event)">
+        <div [className]="'filter01 filter'">
+          <button
+            [className]="
+              isOpenStateFilter
+                ? 'filterButton01 filterButton buttonOn'
+                : 'filterButton01 filterButton'
+            "
+            (click)="onClickStateFilter()"
+          >
+            <span
+              [className]="isOpenStateFilter ? 'filterTxt txtOn' : 'filterTxt'"
+            >
+              {{ stateFilterValue ? stateFilterValue : "ALL STATE" }}
+            </span>
+            <span
+              [className]="
+                isOpenStateFilter ? 'filterIcon iconOn' : 'filterIcon'
+              "
+            ></span>
+          </button>
+          <ul [className]="isOpenStateFilter ? 'ulOn' : ''">
+            <li
+              *ngIf="isOpenStateFilter"
+              (click)="onClickStateFilterOption('complete')"
+            >
+              완료
+            </li>
+            <li
+              *ngIf="isOpenStateFilter"
+              (click)="onClickStateFilterOption('unprocess')"
+            >
+              미처리
+            </li>
+            <li
+              *ngIf="isOpenStateFilter"
+              (click)="onClickStateFilterOption('wait')"
+            >
+              승인대기
+            </li>
+            <li
+              *ngIf="isOpenStateFilter"
+              (click)="onClickStateFilterOption('reject')"
+            >
+              반려
+            </li>
+          </ul>
+        </div>
+        <div [className]="'filter02 filter dateFilter'">
+          <button
+            [className]="
+              isOpenDateFilter
+                ? 'filterButton02 filterButton dateButtonOn'
+                : 'filterButton02 filterButton'
+            "
+            (click)="onClickDateFilter()"
+          >
+            <span
+              [className]="isOpenDateFilter ? 'filterTxt txtOn' : 'filterTxt'"
+              >{{
+                isModelChanged
+                  ? getDateModelString(model.beginDate) +
+                    " - " +
+                    getDateModelString(model.endDate)
+                  : "TODAY"
+              }}
+            </span>
+            <span
+              [className]="
+                isOpenDateFilter ? 'filterIcon iconOn' : 'filterIcon'
+              "
+            ></span>
+          </button>
+          <ul
+            *ngIf="isOpenDateFilter"
+            [className]="isOpenDateFilter ? 'ulOn junetest' : ''"
+          >
+            <form #myForm="ngForm" novalidate>
+              <my-date-range-picker
+                name="mydaterange"
+                [options]="myDateRangePickerOptions"
+                [(ngModel)]="model"
+                (dateRangeChanged)="onDateRangeChanged($event)"
+                required
+              ></my-date-range-picker>
+            </form>
+          </ul>
+        </div>
+        <div [className]="'filter02 filter'">
+          <button
+            [className]="
+              isOpenOsFilter
+                ? 'filterButton02 filterButton buttonOn'
+                : 'filterButton02 filterButton'
+            "
+            (click)="onClickOsFilter()"
+          >
+            <span
+              [className]="isOpenOsFilter ? 'filterTxt txtOn' : 'filterTxt'"
+            >
+              {{ osFilterValue ? osFilterValue : "ALL OS" }}
+            </span>
+            <span [className]="'filterIcon'"></span>
+          </button>
+          <ul *ngIf="isOpenOsFilter" [className]="isOpenOsFilter ? 'ulOn' : ''">
+            <li (click)="onClickOsFilterOption('Android')">Android</li>
+            <li (click)="onClickOsFilterOption('iOS')">iOS</li>
+            <li (click)="onClickOsFilterOption('all')">둘 다</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div [className]="'sectionMain'">
+      <div [className]="'ReviewCardTitle'">
+        <div [className]="'osTitle'">OS</div>
+        <div [className]="'dateTitle'">날짜</div>
+        <div [className]="'reviewTitle'">댓글</div>
+        <div [className]="'tagTitle'">태그</div>
+        <div [className]="'workerTitle'">담당자</div>
+        <div [className]="'replyTitle'">답글</div>
+        <div [className]="'stateTitle'">결재</div>
+      </div>
+      <ul>
+        <li *ngFor="let reviewAndReply of reviewAndReplyList">
+          <app-review-card-item
+            [reviewAndReply]="reviewAndReply"
+          ></app-review-card-item>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>

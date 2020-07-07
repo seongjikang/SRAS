@@ -1,0 +1,17 @@
+<div [className]="'commentSectionTop rejectInputHighlight'">
+  승인요청 반려
+  <div [className]="'commentSectionTop2'">{{
+    reviewAndReply && reviewAndReply.reason
+      ? "반려사유 : " + reviewAndReply.reason
+      : ""
+  }}</div>
+</div>
+<div [className]="'commentSectionInput'">
+  <textarea #commentSectionTextarea
+    [className]="'commentSectionTextarea'"
+    placeholder="승인 반려할 사유를 적어 주세요."
+  ></textarea>
+  <button [className]="'commentConfirmButton'" (click)="onClickRejectButton()">
+    반려
+  </button>
+</div>

@@ -1,0 +1,3 @@
+.searchOptionContent{ width: 330px; height: 300px; margin: 0 auto; box-sizing: border-box; padding: 0 15px;  }
+.searchOptionContent li{ cursor: pointer; display: block; margin: 10px 2.5px; width: 95px; height: 20px; float: left; background-color: #f6f6f6; border-radius: 10px; font-size: 11px; text-align: center; line-height: 20px; color: #666; }
+.searchOptionContent li.on{ background-color: #2A69FF; color: #fff; }

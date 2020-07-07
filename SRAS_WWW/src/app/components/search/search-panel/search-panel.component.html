@@ -1,0 +1,18 @@
+<form 
+  (ngSubmit)="submit(f.value)"
+  #f="ngForm"
+  class="searchForm"
+>
+  <input type="text" name="searchMsg" class="searchInput" ngModel>
+  <ul class="searchFormUl">
+    <!--선택된 태그들 보여주기-->
+    <div *ngFor="let tag of selectedTag">
+      <li>
+        {{ tag.tagContent }}
+      </li>
+      <!--삭제 버튼 이벤트 바인딩-->
+      <div (click)="onDeleteTag($event, tag)"><a href="javascript:void(0);">x</a></div>
+    </div>
+  </ul>
+  <button class="searchButton" type="submit"><img src="../../../../assets/images/icon_search_blue.png"></button>
+</form>

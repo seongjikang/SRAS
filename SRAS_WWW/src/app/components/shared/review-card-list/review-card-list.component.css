@@ -1,0 +1,201 @@
+/* base */
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 24px;
+  color: #00230e;
+  font-family: "Noto Sans KR", sans-serif;
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+img {
+  border: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0px;
+}
+address {
+  font-style: normal;
+}
+fieldset {
+  border: none;
+}
+legend {
+  position: absolute;
+  left: -999em;
+}
+input[type="button"],
+input[type="submit"],
+input[type="ressrt"],
+input[type="image"],
+button {
+  cursor: pointer;
+}
+label.away {
+  position: absolute;
+  left: -999em;
+}
+
+section {
+  width: 100%;
+  min-height: 1200px;
+  overflow: hidden;
+  min-width: 1200px;
+  background-color: #fafafa;
+  padding-bottom: 30px;
+}
+.sectionWrap {
+  width: 80%;
+  height: 100%;
+  margin: 0 auto;
+  padding: 120px 0 70px 0;
+}
+.sectionTop {
+  width: 100%;
+  height: 40px;
+  margin-bottom: 50px;
+}
+.sectionTop .sectionTopLeft {
+  width: 50%;
+  height: 40px;
+  font-size: 20px;
+}
+.sectionTopLeft {
+  width: 50%;
+  float: left;
+  height: 40px;
+  font-size: 20px;
+}
+.sectionTopRight {
+  width: 50%;
+  float: right;
+  height: 40px;
+  font-size: 20px;
+}
+
+/* filter */
+.filter {
+  position: relative;
+  width: 100px;
+  float: right;
+  margin-left: 10px;
+}
+.dateFilter {
+  position: relative;
+  width: 280px;
+  float: right; 
+}
+.filter button {
+  display: block;
+  z-index: 1000;
+  width: 100%;
+  height: 30px;
+  border: none;
+  box-shadow: 0 6px 6px rgba(0, 0, 0, 0.2);
+  font-weight: 500;
+  font-size: 11px;
+  line-height: 30px;
+  background-color: #fff;
+  padding-left: 15px;
+  border-radius: 15px;
+}
+.filter .filterTxt {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 15px;
+  float: left;
+  height: 30px;
+  font-weight: 500;
+  font-size: 11px;
+  font-weight: bold;
+}
+.filter .filterIcon {
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 5px;
+  float: right;
+  width: 25px;
+  height: 30px;
+  float: right;
+  background-image: url(/assets/images/icon_arrowDown.png);
+  background-size: 50%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.filter ul {
+  display: block;
+  position: absolute;
+  z-index: 1000;
+  border-radius: 15px;
+  width: 85px;
+  top: 30px;
+  padding: 0 0 5px 15px;
+}
+.filter ul li {
+  line-height: 32px;
+  display: block;
+  font-size: 14px;
+  color: #fff;
+  cursor: pointer;
+}
+.filter .buttonOn {
+  background-color: #2a69ff;
+  height: 195px;
+  z-index: 2000;
+  box-shadow: 0 6px 6px rgba(0, 0, 0, 0.2);
+}
+.filter .dateButtonOn {
+  background-color: #2a69ff;
+  height: 130px;
+  width: 280px;
+  z-index: 2000;
+  box-shadow: 0 6px 6px rgba(0, 0, 0, 0.2);
+}
+.filter .txtOn {
+  color: #fff;
+}
+.filter .iconOn {
+  background-image: url(/assets/images/icon_arrowDown_white.png);
+}
+.filter .ulOn {
+  display: block;
+  z-index: 500;
+}
+
+/* Mainsection Contents */
+.sectionMain {
+  width: 100%;
+}
+
+.ReviewCardTitle {
+  width: 100%;
+  height: 30px;
+  margin-bottom: 10px;
+}
+.ReviewCardTitle div {
+  float: left;
+  font-size: 16px;
+  color: #999;
+  font-weight: bold;
+  text-align: center;
+}
+.ReviewCardTitle .osTitle,
+.dateTitle,
+.workerTitle,
+.stateTitle {
+  width: 7.5%;
+}
+.ReviewCardTitle .tagTitle {
+  width: 10%;
+}
+.ReviewCardTitle .reviewTitle,
+.replyTitle {
+  width: 30%;
+}

@@ -1,0 +1,15 @@
+<app-header></app-header>
+<section>
+  <div [className]="'detailSectionOuterWrap'">
+    <app-detail-review-wrap
+      [currentReviewId]="currentReviewId"
+      (reviewAndReplySendEvent)="receiveReviewAndReply($event)"
+    ></app-detail-review-wrap>
+  </div>
+  <div [className]="'commentSectionOuterWrap'">
+    <app-detail-comments
+      [currentReviewId]="currentReviewId"
+      [reviewAndReply]="reviewAndReply"
+    ></app-detail-comments>
+  </div>
+</section>

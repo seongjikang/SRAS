@@ -1,0 +1,76 @@
+<div [className]="'detailSectionWrap'">
+  <div [className]="'detailSectionTop'">리뷰관리 | Detail</div>
+  <div [className]="'detailCardTitle'">
+    <div>댓글</div>
+    <div [className]="'detailTagTitle'">분류</div>
+    <div>답글</div>
+  </div>
+  <div [className]="'detailSectionMain'">
+    <app-detail-review-content
+      [reviewAndReply]="reviewAndReply"
+    ></app-detail-review-content>
+    <app-detail-review-category
+      (submitPorNClickEvent)="openReplyInput($event)"
+      (tagChooseEvent)="addChosenTags($event)"
+      [isSubmitPorN]="isSubmitPorN"
+      [isNegative]="isNegative"
+      [reviewAndReply]="reviewAndReply ? reviewAndReply : ''"
+    ></app-detail-review-category>
+    <app-detail-review-reply
+      [savedReply]="reply"
+      [category]="category"
+      [detailCategory]="detailCategory"
+      [isSubmitPorN]="isSubmitPorN"
+      [isNegative]="isNegative"
+      [chosenTagCount]="tagCount"
+      (modifyReplyContentEvent)="getReplyContentToSave($event)"
+      (existReplyContentEvent)="existReplyContent($event)"
+    ></app-detail-review-reply>
+  </div>
+  <div [className]="'detailSectionButton'">
+    <div
+      [className]="
+        ((tagCount > 0 && existReplyContentToSave) ||
+          (!isNegative && isSubmitPorN)) &&
+        replyContentToSave !== reply
+          ? 'buttonSave detailButton on'
+          : 'buttonSave detailButton'
+      "
+      *ngIf="
+        isSubmitPorN &&
+        reviewAndReply && reviewAndReply.approveChk !== 'complete'
+      "
+      (click)="onClickSaveButton()"
+    >
+      Save
+    </div>
+    <div
+      [className]="'buttonBack detailButton on'"
+      *ngIf="
+        isSubmitPorN &&
+        reviewAndReply && reviewAndReply.approveChk !== 'complete'
+      "
+      (click)="onClickBackButton()"
+    >
+      Back
+    </div>
+    <div
+      [className]="
+        reviewAndReply && reviewAndReply.approveChk === 'complete'
+          ? 'buttonConfirm buttonConfirmDisabled detailButton'
+          : 'buttonConfirm detailButton'
+      "
+      (click)="
+        reviewAndReply && reviewAndReply.approveChk === 'complete'
+          ? ''
+          : onClickConfirmButton()
+      "
+    >
+      {{
+        reviewAndReply && reviewAndReply.approveChk === "complete"
+          ? "컨펌되었습니다"
+          : "Confirm"
+      }}
+    </div>
+  </div>
+</div>

@@ -1,0 +1,45 @@
+<div
+  [className]="'ReviewCard'"
+  (click)="onClickReviewCardItem(reviewAndReply.reviewId)"
+>
+  <ul [className]="'cardInner'">
+    <li [className]="'cardInnerContent os'">
+      <span
+        [className]="reviewAndReply && (reviewAndReply.osType === 'ios' ? 'ios' : 'android')"
+      ></span>
+    </li>
+    <li [className]="'cardInnerContent date'">
+      {{
+        reviewAndReply && (reviewAndReply.reviewDate? getReviewDateString(reviewAndReply.reviewDate): "-")
+      }}
+    </li>
+    <li [className]="'cardInnerContent review'">
+      {{ reviewAndReply && (reviewAndReply.reviewContent? reviewAndReply.reviewContent: "-") }}
+    </li>
+    <li [className]="'cardInnerContent tag'">
+      <ul [className]="'detailTagContent'" *ngIf="reviewAndReply && reviewAndReply.tags">
+        <li *ngFor="let tag of tagList" >
+          # {{ tag.tagContent }}
+        </li>
+      </ul> 
+    </li>
+    <li [className]="'cardInnerContent worker'">
+      {{
+        reviewAndReply &&
+          (reviewAndReply.replyManagerId
+            ? reviewAndReply.replyManagerId
+            : "-")
+      }}
+    </li>
+    <li [className]="'cardInnerContent reply'">
+      {{ reviewAndReply && reviewAndReply.replyContent }}
+    </li>
+    <li [className]="'cardInnerContent state'">
+      {{
+        reviewAndReply &&
+          (reviewAndReply.approveChk ? getHangulStateString(reviewAndReply.approveChk) : "-")
+      }}
+      <!-- <button (click)="postApproveChk()">승인</button> -->
+    </li>
+  </ul>
+</div>

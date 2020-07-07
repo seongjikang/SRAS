@@ -1,0 +1,38 @@
+<div [className]="'detailTagCard detailCard'">
+  <div *ngIf="isSubmitPorN == false">
+    <div [className]="'detailTagInner proConTitle'">긍/부정 판단</div>
+    <div [className]="'detailTagInner proConButtonWrap'">
+        <div [className]="'proConButton'">
+            <div [className]="isNegative? 'conButton': 'proButton'" (click)="onClickNegativeToggle($event)">긍정</div>
+            <div [className]="isNegative? 'proButton': 'conButton'" (click)="onClickNegativeToggle($event)">부정</div>
+        </div>
+    </div>
+    <div [className]="'detailTagInstruction'">
+        긍정댓글인 경우 [긍정] > [확인] 선택시<br/>
+        우측 하단 [SAVE]버튼이 바로 활성화되며<br/>
+        답글을 달지 않아도 됩니다.<br/><br/>
+        부정댓글인 경우 [부정] > [확인] 선택시<br/>
+        태그, 답글 기능이 활성화되며<br/>
+        각 메뉴에서 태그 선택/답글 작성 완료 후<br/>
+        우측 하단 [SAVE]버튼을 누르면 됩니다.<br/><br/>
+        [SAVE]버튼 클릭시 승인요청이 완료됩니다.
+    </div>
+    <div [className]="'detailTagConfirmButton'">
+        <div [className]="'confirmButton'" (click)="onClickButtonToFixPorN($event)">확인</div>
+    </div>
+  </div>
+  <ul [className]="'detailTagContent'" *ngIf="isSubmitPorN == true && isNegative == true && tagList">
+    <li *ngFor="let tag of tagList" 
+      (click)="onClickTag($event, tag)" 
+      [className]="tag.isClicked ? 'liClicked': ''" >
+      # {{ tag.tagContent }}
+    </li>
+  </ul> 
+  <div [className]="'detailTagAdd'" *ngIf="isSubmitPorN == true && isNegative == true">
+    <div [className]="'detailTagAddTitle'">직접추가</div>
+    <form>
+        <input type="text" #tagToAdd [className]="'detailTagAddInput'">
+        <button [className]="'detailTagAddButton'" (click)="onClickAddTagButton($event)">Add</button>
+    </form>
+</div>
+</div>

@@ -1,0 +1,81 @@
+# System Files
+.DS_Store
+Thumbs.db
+
+##############################
+# ignoring files in SRAS_WWW #
+##############################
+/SRAS_WWW/sras-www/README.md
+
+# compiled output
+/SRAS_WWW/sras-www/dist
+/SRAS_WWW/sras-www/tmp
+/SRAS_WWW/sras-www/out-tsc
+
+# dependencies
+/SRAS_WWW/sras-www/node_modules
+
+# IDEs and editors
+/SRAS_WWW/sras-www/.idea
+/SRAS_WWW/sras-www/.project
+/SRAS_WWW/sras-www/.classpath
+/SRAS_WWW/sras-www/.c9/
+/SRAS_WWW/sras-www/*.launch
+/SRAS_WWW/sras-www/.settings/
+/SRAS_WWW/sras-www/*.sublime-workspace
+
+# IDE - VSCode
+/SRAS_WWW/sras-www/.vscode/*
+/SRAS_WWW/sras-www/!.vscode/settings.json
+/SRAS_WWW/sras-www/!.vscode/tasks.json
+/SRAS_WWW/sras-www/!.vscode/launch.json
+/SRAS_WWW/sras-www/!.vscode/extensions.json
+
+# misc
+/SRAS_WWW/sras-www/.sass-cache
+/SRAS_WWW/sras-www/connect.lock
+/SRAS_WWW/sras-www/coverage/*
+/SRAS_WWW/sras-www/libpeerconnection.log
+/SRAS_WWW/sras-www/npm-debug.log
+/SRAS_WWW/sras-www/testem.log
+/SRAS_WWW/sras-www/typings
+
+# e2e
+/SRAS_WWW/sras-www/e2e/*.js
+/SRAS_WWW/sras-www/e2e/*.map
+
+##############################
+# ignoring files in SRAS_WWW #
+##############################
+SRAS_SRC/HELP.md
+SRAS_SRC/target/
+SRAS_SRC/!.mvn/wrapper/maven-wrapper.jar
+SRAS_SRC/!**/src/main/**
+SRAS_SRC/!**/src/test/**
+
+### STS ###
+SRAS_SRC/.apt_generated
+SRAS_SRC/.classpath
+SRAS_SRC/.factorypath
+SRAS_SRC/.project
+SRAS_SRC/.settings
+SRAS_SRC/.springBeans
+SRAS_SRC/.sts4-cache
+
+### IntelliJ IDEA ###
+SRAS_SRC/.idea
+SRAS_SRC/*.iws
+SRAS_SRC/*.iml
+SRAS_SRC/*.ipr
+
+### NetBeans ###
+SRAS_SRC/nbproject/private/
+SRAS_SRC/nbbuild/
+SRAS_SRC/dist/
+SRAS_SRC/nbdist/
+SRAS_SRC/.nb-gradle/
+SRAS_SRC/build/
+
+### VS Code ###
+SRAS_SRC/.vscode/
+##############################

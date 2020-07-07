@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR');
+
+/* base */
+*{ margin: 0; padding: 0; font-size: 24px; color: #00230e; font-family: 'Noto Sans KR', sans-serif; }
+html, body{ width: 100%; height: 100%; }
+li{ list-style: none; }
+a{ text-decoration: none; }
+img{ border: none;}
+table{ border-collapse: collapse; border-spacing: 0px; }
+address{ font-style: normal; }
+fieldset{ border: none; }
+legend{ position: absolute; left: -999em; }
+input[type=button],input[type=submit],input[type=ressrt],input[type=image],button{ cursor:pointer; }
+label.away{ position: absolute; left: -999em; }
+form *{ border: none; }
+
+/*layout*/
+header{ position: fixed; z-index: 5000; width: 100%; height: 70px; min-width: 1300px; background-color: #2A69FF; box-shadow:  0 6px 6px rgba(0,0,0,0.2); }
+section{ width: 100%; min-height: 500px; overflow: hidden; min-width: 1300px; background-color: #FAFAFA; padding-bottom: 30px;  }
+
+/* 로그인 */
+.loginBody{ background-color: #fafafa; padding-top: 10em; box-sizing: border-box; }
+.loginBox{ width: 350px; height: 350px; box-sizing: border-box; padding: 40px; background-color: #fff; text-align: center; box-shadow: 0 6px 6px rgba(0,0,0,0.2); border-radius: 20px; margin: 0 auto; }
+.loginBox .loginTitle{ color: #2A69FF; font-weight: bold; font-size: 30px; margin-bottom: 20px;}
+.loginBox input{ width: 100%; height: 40px; background-color: #f3f3f3; display: block; margin: 0 auto; margin-bottom: 10px; border-radius: 20px; box-sizing: border-box; padding: 5px 20px; font-size: 12px; }
+.loginBox .loginButton{ width: 100%; height: 40px; background-color: #2A69FF; box-shadow: 0 6px 6px rgba(0,0,0,0.2); color: #fff; display: block; margin: 0 auto; margin: 20px 0; border-radius: 20px; font-size: 20px; }
+.loginNotice{ color: #999; font-size: 13px; }
+
+/* header */
+header img{ width: 40px; height: 40px;}
+.headerLogoWrap{ width:10%; height: 70px; display: block; float: left;}
+.headerLogoWrap .mainLogo{ display: block; box-sizing: border-box; width: 70px; height: 70px; padding: 15px; line-height: 70px; }
+.headerLogoWrap .mainLogo img{ display: block;}
+.headerMainWrap{ min-width: 1000px; display: block; float: left; width: 80%; height: 70px; position: relative; left: 0; right: 0;}
+.headerMainWrap .mainNav{ display: block; width: 480px; float: left; padding: 15px 0;}
+.headerMainWrap .mainNav li{ display: block; float: left; width: 140px; height: 40px; line-height: 70px; margin-right: 20px; text-align: center; }
+.headerMainWrap .mainNav li a{ font-size: 20px; font-weight: 500; display: block; line-height: 40px; color: #fff; opacity: 0.6; }
+.headerMainWrap .mainNav li a:hover{ color: #fff; opacity: 1; }
+
+.headerMainWrap .mainNav li.on{ border-radius: 30px; background-color: #6996FF; }
+.headerMainWrap .mainNav li a.on{ color: #fff; opacity: 1; }
+
+.headerMainWrap .mainIcon{ display: block; width: 210px; float: right; padding: 15px 0;}
+.headerMainWrap .mainIcon li{ display: block; float: right; width: 40px; height: 40px; line-height: 80px; margin-left: 20px; text-align: center; }
+.headerMainWrap .mainIcon li a{ display: block; line-height: 40px; }
+
+/* 메인페이지 */
+/* Mainsection */
+.sectionWrap{ width: 80%; min-height: 1000px; height: 100%; margin: 0 auto; padding: 120px 0 70px 0; }
+
+.sectionTop{ width: 100%; height: 40px; margin-bottom: 50px; }
+.sectionTop .sectionTopLeft{ width: 50%; height: 40px; font-size: 20px; }
+.sectionTopLeft{ width: 50%; float: left; height: 40px; font-size: 20px; }
+.sectionTopRight{ width: 50%; float: right; height: 40px; font-size: 20px; }
+
+/* filter */
+.filter{ position: relative; width: 100px; float: right; margin-left: 10px; }
+/* .filter01{ position: absolute; right: 10%;} */
+.filter button{ display: block; z-index: 1000; width: 100%; height: 30px; border: none; box-shadow: 0 6px 6px rgba(0,0,0,0.2); font-weight: 500; font-size: 11px; line-height: 30px; background-color: #fff; padding-left: 15px; border-radius: 15px; }
+.filter button .filterTxt{ display: block; position: absolute; top: 0; left: 15px; float: left; height: 30px;  font-weight: 500; font-size: 11px; font-weight: bold; }
+.filter button .filterIcon{ display: block; position: absolute; top: 0; right: 5px; float: right; width: 25px; height: 30px; float: right; background-image: url(images/icon_arrowDown.png); background-size: 50%; background-repeat: no-repeat; background-position: center;}
+.filter ul{ position: absolute; z-index: 500; border-radius: 15px; width: 85px; top: 0; right: 0; padding: 0 0 5px 15px; }
+.filter ul li{ line-height: 32px; }
+.filter ul li a{ display: block; font-size: 14px; color: #fff; }
+
+/* .filter.on{ background-color: #2A69FF; } */
+.filter button.on{ background-color: #2A69FF; z-index: 2000; }
+.filter button .filterTxt.on{ color: #fff; }
+.filter button .filterIcon.on{ background-image: url(images/icon_arrowDown_white.png);}
+.filter button ul.on{ z-index: 500;}
+
+/* Mainsection Contents */
+.sectionMain{ width: 100%; }
+
+.ReviewCardTitle{ width: 100%; height: 30px; margin-bottom: 10px; }
+.ReviewCardTitle div{ float: left; font-size: 16px; color: #999; font-weight: bold; text-align: center; }
+.ReviewCardTitle .osTitle, .dateTitle, .workerTitle, .stateTitle{ width: 7.5%; }
+.ReviewCardTitle .tagTitle{ width: 10%; }
+.ReviewCardTitle .reviewTitle, .replyTitle{ width: 30%; }
+
+.ReviewCard{ width: 100%; height: 200px; border-radius: 15px; background-color: #fff; box-shadow: 0 6px 6px rgba(0,0,0,0.2); margin-bottom: 20px; }
+.ReviewCard .cardInner{ display: block; box-sizing: border-box; width: 100%; height: 200px; padding: 20px 0; }
+.ReviewCard .cardInner .cardInnerContent{ display: block; float: left; box-sizing: border-box; border-left: 1px solid #e0e0e0; height: 100%; padding: 0 10px; color: #666; }
+.cardInner .os, .date, .worker, .state{ width: 7.5%; text-align: center; font-size: 13px; line-height: 160px; font-weight: bold; }
+.cardInner .tag{ width: 10%; height: 100%; text-align: center; font-size: 13px; line-height: 160px; font-weight: bold; }
+.cardInner .review, .reply{ overflow: auto; width: 30%; font-size: 12px; line-height: 16px; }
+.cardInner .os{ border: none !important; }
+.cardInner .os span{ display: block; margin: 0 auto; margin-top: 50px; width: 40px; height: 50px; overflow: hidden; background-image: url(images/icon_os.png); background-size: 100%; background-repeat: no-repeat; background-position: 0 0; }
+.cardInner .state{ padding: 0 !important; }
+
+/* Detail Section */
+.detailSectionOuterWrap{ width: 100%; height: 100%; background-color: #fafafa; }
+.detailSectionWrap{ width: 80%; height: 100%; margin: 0 auto; padding-top: 120px; }
+
+.detailSectionTop{ width: 100%; height: 40px; margin-bottom: 50px; height: 40px; font-size: 20px; }
+.detailCardTitle{  width: 100%; height: 30px; margin-bottom: 10px; }
+.detailCardTitle div{ float: left; font-size: 16px; color: #999; font-weight: bold; text-align: center; width: calc(38% - 10px); }
+.detailCardTitle .detailTagTitle{ width: 24%; margin: 0 10px; }
+
+.detailSectionMain{ width: 100%; height: 500px; margin-bottom: 30px; }
+.detailCard{ float: left; background-color: #fff; border-radius: 15px; width: calc(38% - 10px); height: 100%; box-shadow: 0 6px 6px rgba(0,0,0,0.2); padding: 25px; box-sizing: border-box; font-size: 13px; line-height: 20px; color: #666; }
+.detailTagCard{ width: 24%; margin: 0 10px; }
+.detailTagCard2{ width: 24%; margin: 0 10px; padding: 15px; }
+
+/* 댓글 패널 */
+.detailReviewCardContent{ width: 100%; height: 335px; box-sizing: border-box; border-bottom: 1px solid #E0E0E0; font-size: 13px; line-height: 20px; color: #666; }
+.detailReviewCardDetail{ width: 100%; padding-top: 5px; box-sizing: border-box; }
+.detailReviewCardDetail .detail{ float:left; width: 33.33%; height: 100%; }
+.detailReviewCardDetail .detail li{ display: block; height: 23.5px; margin: 5px 0; }
+.detailReviewCardDetail .detail01 li{ margin-right: 10px; }
+.detailReviewCardDetail .detail02 li{ margin-right: 10px; }
+.detailReviewCardDetail .detail02 li{ margin-left: 10px; }
+.detailReviewCardDetail .detail03 li{ margin-left: 10px; }
+
+.detailReviewCardDetail .detail .span01{ display: block; width: 40px; font-size: 10px; font-weight: bold; color: #666; float: left; }
+.detailReviewCardDetail .detail .span02{ display: block; width: 40px; font-size: 10px; color: #666; float: right; text-align: right; }
+
+.detailReplyTemplateItem{ padding: 15px 25px; box-sizing: border-box;}
+.detailReplyTemplateChioce{ width: 100%; height: 20px; margin-bottom: 10px; }
+.detailReplyTemplateChioce > li{ cursor: pointer; width: 20px; height: 20px; display: block; float: left; margin-right: 15px; background-color: #999; border-radius: 10px; line-height: 20px; font-weight: bold; text-align: center; font-size: 14px; color: #fff; }
+.detailReplyTemplateChioce > li.on{ background-color: #2A69FF; }
+
+.detailReplyTemplateChioceContent > li{ color: #666; font-size: 13px; line-height: 20px; }
+.detailReplyTemplateChioceContent > li > textarea{ width: 100%; height: 200px; margin: 5px 0; font-size: 13px; line-height: 20px; border-radius: 10px; }
+
+/* 긍부정 판단 패널 */
+.detailTagCard .proConTitle{ text-align: center; font-size: 15px; font-weight: bold; color: #666; padding-bottom: 25px; border-bottom: 1px solid #E0E0E0; }
+
+.proConButtonWrap{ width: 100%; height: 100px; padding: 30px 0; box-sizing: border-box; border-bottom: 1px solid #E0E0E0; }
+.proConButton { width: 160px; height: 40px; border: 1px solid #2A69FF; border-radius: 20px; box-sizing: border-box; margin: 0 auto; padding: 2px; }
+.proButton, .conButton{ cursor: pointer; width: 77px; height: 100%; color:#2A69FF; border-radius: 20px; font-size: 18px; line-height: 32px; text-align: center; }
+.proButton{ float: left;  }
+.conButton{ float: right; }
+.proButton.on{ background-color:#2A69FF; color: #fff;}
+.conButton.on{ background-color:#2A69FF; color: #fff;}
+
+.detailTagInstruction{ padding: 20px 0; text-align: center; line-height: 15px; font-size: 10px; color: #999; border-bottom: 1px solid #E0E0E0; }
+
+.detailTagConfirmButton{ padding-top: 40px; }
+.confirmButton{ cursor: pointer; width: 77px; height: 36px; margin: 0 auto; background-color: #2A69FF; color: #fff; border-radius: 20px; font-size: 18px; line-height: 35px; text-align: center; }
+
+/* 태그패널 */
+.detailTagContent{ width: 100%; height: 400px; margin: 0 auto; box-sizing: border-box; padding: 0;  }
+.detailTagContent li{ cursor: pointer; display: block; width: 30%; height: 20px; float: left; background-color: #f6f6f6; border-radius: 10px; font-size: 11px; text-align: center; line-height: 20px; color: #666; margin: 10px 1.665%; }
+.detailTagAdd{ position: relative; width: 100%; height: 60px; }
+.detailTagAdd .detailTagAddTitle{ width: 100%; height: 20px; text-align: center; font-size: 15px; line-height: 20px; color: #999; margin-bottom: 10px; }
+.detailTagAddInput{ width: 100%; height: 24px; border: 1px solid #999; box-sizing: border-box; border-radius: 12px; padding: 2px 10px; padding-right: 50px; font-size: 12px; }
+.detailTagAddButton{ position: absolute; top: 33px; right: 0; width: 50px; height: 24px; background-color: #999; border-top-right-radius: 12px; border-bottom-right-radius: 12px; color:#fff; font-size: 13px; line-height: 24px; }
+
+/* 답글 패널 */
+.detailReplyCard{ background-color: #999; position: relative; }
+.detailReplyInner{ color: #fff; font-size: 20px; text-align: center; line-height: 420px;}
+.detailReplyCardActivated{ position: absolute; width: 100%; height: 500px; top: 0; left: 0; }
+.detailReplyNav{ width: 100%; height: 35px; }
+.detailReplyNav li{ cursor: pointer; display: block; width: 25%; height: 35px; border-top-left-radius: 15px; border-top-right-radius: 15px; float: left; line-height: 35px; color: #fff; text-align: center; font-size: 14px; }
+.detailReplyNav li.on{ color: #2A69FF; background-color: #fff; font-weight: bold; }
+
+.detailReplyTemplate{ width: 100%; height: 465px; background-color: #fff; border-radius: 15px; }
+.detailReplyTemplate.li01{ border-top-left-radius: 0;}
+.detailReplyTemplate.li04{ border-top-right-radius: 0;}
+.detailReplyTemplate > li{ width: 100%; height: 465px; }
+
+/* detail 버튼 = Back, Save */
+.detailSectionButton{ width: 100%; height: 40px; margin-bottom: 30px; }
+.detailSectionButton .detailButton{ cursor: pointer; float: right; width: 150px; border-radius: 20px; margin-left: 15px; text-align: center; color: #fff; line-height: 40px; font-size: 20px; box-shadow:  0 6px 6px rgba(0,0,0,0.2); }
+.detailSectionButton .buttonBack{ background-color: #999; }
+.detailSectionButton .buttonSave{ background-color: #999; }
+.detailSectionButton .buttonSave.on{ background-color: #2A69FF; color: #fff; }
+
+/* Comment 부분 */
+.commentSectionOuterWrap{ width: 100%; overflow: hidden; background-color: #fff; }
+.commentSectionWrap{ width: 80%; height: 100%; background-color: #fff; margin: 0 auto; padding: 70px 0; }
+.commentSectionTop{ width: 100%; height: 40px; margin-bottom: 10px; height: 40px; font-size: 20px; color: #333; }
+.commentSectionInput{ position: relative; width: 100%; height: 150px; border-radius: 15px; background-color: #f6f6f6; margin-bottom: 40px; }
+.commentSectionTextarea{ width: 95%; border-radius: 20px; height: 150px; background-color: #f6f6f6; display: block; border: none; padding: 15px 50px 15px 0; box-sizing: border-box;  }
+.commentConfirmButton{ position: absolute; bottom: 7px; right: 15px; border: none; background-color: #f6f6f6; font-size: 18px; color: #666; }
+
+.commentsList{ width: 100%; height: 150px; box-sizing: border-box; padding: 20px 10px; border-top: 1px solid #999; }
+.commentsList .commentInfo{ width: 100%; height: 20px; margin-bottom: 15px; }
+.commentsList .commentInfo .commentWriter{ float: left; width: 50%; font-size: 16px; color: #333; }
+.commentsList .commentInfo .commentCreated{ float: right; width: 50%; font-size: 16px; text-align: right; line-height: 20px; }
+.commentsList .commentContent{ overflow: auto; width: 100%; height: 75px; font-size: 12px; color: #666; }
+
+/* Search 부분 */
+.searchSection{ overflow: auto; height: 100%; background-color: #2A69FF; }
+.searchSection img{ width: 40px; height: 40px;}
+.serachBackWrap{ width:10%; height: 70px; display: block; float: left;}
+.serachBackWrap .backIcon{ display: block; box-sizing: border-box; width: 70px; height: 70px; padding: 15px; line-height: 70px; }
+.serachBackWrap .backIcon img{ display: block;}
+
+.searchWrap{ width: 50%;  min-width: 700px; margin: 0 auto; padding: 130px 0; }
+.searchWrap .searchTitle{ color: #fff; font-size: 35px; text-align: center; margin-bottom: 30px; }
+
+.searchForm{ position: relative; width: 100%; text-align: center; margin-bottom: 30px; }
+.searchForm .searchInput{ width: 100%; height: 40px; border: none; border-radius: 25px; font-size: 14px; box-sizing: border-box; text-align: center; padding: 7px 20px; box-shadow:  0 6px 6px rgba(0,0,0,0.2); }
+.searchForm .searchButton{ position: absolute; width: 60px; background-color: #fff; height: 40px; border: none; border-radius: 20px; top: 2px; right: 0; }
+.searchFrom .searchButton img{ width: 40px; height: 40px; text-align: center; }
+
+.searchOption{ width: 100%; height: 450px; background-color: #fff; box-sizing: border-box; padding: 25px 15px; border-radius: 20px; box-shadow:  0 6px 6px rgba(0,0,0,0.2); }
+.searchOptionInner{ width: 50%; float: left;}
+.searchOptionTitle{ color: #2A69FF; text-align: center; font-size: 18px;  margin-bottom: 20px; } 
+.searchOptionContent{ width: 330px; height: 300px; margin: 0 auto; box-sizing: border-box; padding: 0 15px;  }
+
+.searchOptionInner .searchOptionContent li{ cursor: pointer; display: block; margin: 10px 2.5px; width: 95px; height: 20px; float: left; background-color: #f6f6f6; border-radius: 10px; font-size: 11px; text-align: center; line-height: 20px; color: #666; }
+.searchOptionInner .searchOptionContent li.on{ background-color: #2A69FF; color: #fff; }

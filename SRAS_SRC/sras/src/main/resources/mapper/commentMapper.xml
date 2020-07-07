@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+<mapper namespace="com.shinhan.sras.mapper.CommentMapper">
+    <select id="selectCommentList" parameterType="String" resultType="com.shinhan.sras.model.Comment">
+        SELECT
+            COMMENT_ID AS "commentId",
+            REVIEW_ID AS "reviewId",
+            USER_ID AS "userId",
+            COMMENT_DATA AS "comment",
+            COMMENT_DATE AS "commentDate"
+        FROM
+            COMMENT_LIST
+        WHERE 1=1
+            AND REVIEW_ID = #{reviewId}
+            AND REVIEW_DATE = #{reviewDate}
+        ORDER BY COMMENT_DATE DESC, COMMENT_ID DESC
+    </select>
+
+    <insert id= "insertComment" parameterType="String">
+        INSERT INTO COMMENT_LIST
+            (REVIEW_DATE, REVIEW_ID, COMMENT_ID, USER_ID, COMMENT_DATA, COMMENT_DATE)
+        VALUES
+            (#{reviewDate}, #{reviewId}, #{commentId}, #{userId}, #{comment}, #{commentDate})
+    </insert>
+
+    <update id="updateComment" parameterType="String">
+        UPDATE COMMENT_LIST
+        SET
+            COMMENT_DATA = #{comment},
+            COMMENT_DATE = #{commentDate}
+        WHERE 1=1
+            AND REVIEW_ID = #{reviewId}
+            AND REVIEW_DATE = #{reviewDate}
+            AND COMMENT_ID = #{commentId}
+            AND USER_ID = #{userId}
+    </update>
+</mapper>

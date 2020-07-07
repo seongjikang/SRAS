@@ -1,0 +1,30 @@
+/* base */
+*{ margin: 0; padding: 0; font-size: 24px; color: #00230e; font-family: 'Noto Sans KR', sans-serif; }
+li{ list-style: none; }
+a{ text-decoration: none; }
+img{ border: none;}
+table{ border-collapse: collapse; border-spacing: 0px; }
+address{ font-style: normal; }
+fieldset{ border: none; }
+legend{ position: absolute; left: -999em; }
+input[type=button],input[type=submit],input[type=ressrt],input[type=image],button{ cursor:pointer; }
+label.away{ position: absolute; left: -999em; }
+
+/*layout*/
+header{ position: fixed; z-index: 5000; width: 100%; height: 70px; min-width: 1200px; background-color: #2A69FF; box-shadow:  0 6px 6px rgba(0,0,0,0.2); }
+section{ width: 100%; min-height: 500px; overflow: hidden; min-width: 1200px; background-color: #FAFAFA; padding-bottom: 30px;  }
+
+.detailCard{ float: left; background-color: #fff; border-radius: 15px; width: calc(38% - 10px); height: 100%; box-shadow: 0 6px 6px rgba(0,0,0,0.2); padding: 25px; box-sizing: border-box; font-size: 13px; line-height: 20px; color: #666; }
+
+/* 댓글 패널 */
+.detailReviewCardContent{ width: 100%; height: 335px; box-sizing: border-box; border-bottom: 1px solid #E0E0E0; font-size: 13px; line-height: 20px; color: #666; }
+.detailReviewCardDetail{ width: 100%; padding-top: 5px; box-sizing: border-box; }
+.detailReviewCardDetail .detail{ float:left; width: 33.33%; height: 100%; }
+.detailReviewCardDetail .detail li{ display: block; height: 23.5px; margin: 5px 0; }
+.detailReviewCardDetail .detail01 li{ margin-right: 10px; }
+.detailReviewCardDetail .detail02 li{ margin-right: 10px; }
+.detailReviewCardDetail .detail02 li{ margin-left: 10px; }
+.detailReviewCardDetail .detail03 li{ margin-left: 10px; }
+
+.detailReviewCardDetail .detail .span01{ display: block; width: 40px; font-size: 10px; font-weight: bold; color: #666; float: left; }
+.detailReviewCardDetail .detail .span02{ display: block; width: 80px; font-size: 10px; color: #666; float: right; text-align: right; }

@@ -1,0 +1,89 @@
+<div [className]="'detailReviewCard detailCard'">
+  <div [className]="'detailReviewCardContent'">
+    {{ reviewAndReply && reviewAndReply.reviewContent }}
+  </div>
+  <div [className]="'detailReviewCardDetail'">
+    <ul [className]="'detail01 detail'">
+      <li>
+        <span [className]="'span01'">OS</span
+        ><span [className]="'span02'">{{
+          reviewAndReply && reviewAndReply.osType
+        }}</span>
+      </li>
+      <li>
+        <span [className]="'span01'">OS버전</span
+        ><span [className]="'span02'">{{
+          reviewAndReply && reviewAndReply.osVersion
+        }}</span>
+      </li>
+      <li>
+        <span [className]="'span01'">별점</span
+        ><span [className]="'span02'">{{
+          reviewAndReply && reviewAndReply.reviewStar
+        }}</span>
+      </li>
+      <li>
+        <span [className]="'span01'">답글작성</span
+        ><span [className]="'span02'">{{
+          reviewAndReply && getDateString(reviewAndReply.reviewDate)
+        }}</span>
+      </li>
+    </ul>
+    <ul [className]="'detail02 detail'">
+      <li>
+        <span [className]="'span01'">기기</span
+        ><span [className]="'span02'">{{
+          reviewAndReply && reviewAndReply.deviceInfo
+        }}</span>
+      </li>
+      <li>
+        <span [className]="'span01'">앱버전</span
+        ><span [className]="'span02'">{{
+          reviewAndReply && reviewAndReply.appVersion
+        }}</span>
+      </li>
+      <li>
+        <span [className]="'span01'">담당자</span
+        ><span [className]="'span02'">{{
+          reviewAndReply && reviewAndReply.replyManagerId !== "-1"
+            ? reviewAndReply.replyManagerId
+            : "지정되지 않음"
+        }}</span>
+      </li>
+      <li>
+        <span [className]="'span01'">승인요청</span
+        ><span [className]="'span02'">{{ reviewAndReply && (reviewAndReply.requestDate? reviewAndReply.requestDate: "-") }}</span>
+      </li>
+    </ul>
+    <ul [className]="'detail03 detail'">
+      <li>
+        <span [className]="'span01'">제조사</span
+        ><span [className]="'span02'">{{
+          reviewAndReply && reviewAndReply.maker
+        }}</span>
+      </li>
+      <li>
+        <span [className]="'span01'">빌드번호</span
+        ><span [className]="'span02'">{{
+          reviewAndReply && reviewAndReply.buildNo
+        }}</span>
+      </li>
+      <li>
+        <span [className]="'span01'">처리상태</span
+        ><span [className]="'span02'">{{
+          reviewAndReply &&
+            (reviewAndReply.approveChk
+              ? getHangulStateString(reviewAndReply.approveChk)
+              : "-")
+        }}</span>
+      </li>
+      <li>
+        <span [className]="'span01'">승인완료</span
+        ><span [className]="'span02'">{{
+          reviewAndReply &&
+            (reviewAndReply.approveDate ? getDateString(reviewAndReply.approveDate) : "-")
+        }}</span>
+      </li>
+    </ul>
+  </div>
+</div>

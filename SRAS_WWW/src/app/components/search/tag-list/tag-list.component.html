@@ -1,0 +1,5 @@
+<ul class="searchOptionContent">
+  <li *ngFor="let tag of tagList" (click)="onClickTag($event, tag)" [ngClass]="(tag.isClicked)? 'on': '' ">
+    {{ tag.tagContent }}
+  </li>
+</ul>

@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR');
+
+/* base */
+*{ margin: 0; padding: 0; font-size: 24px; color: #00230e; font-family: 'Noto Sans KR', sans-serif; }
+html, body{ width: 100%; height: 100%; }
+li{ list-style: none; }
+a{ text-decoration: none; }
+img{ border: none;}
+table{ border-collapse: collapse; border-spacing: 0px; }
+address{ font-style: normal; }
+fieldset{ border: none; }
+legend{ position: absolute; left: -999em; }
+input[type=button],input[type=submit],input[type=ressrt],input[type=image],button{ cursor:pointer; }
+label.away{ position: absolute; left: -999em; }
+form *{ border: none; }
+
+/* 로그인 */
+.loginBody{ background-color: #fafafa; padding-top: 10em; padding-bottom: 20em; box-sizing: border-box; }
+.loginBox{ width: 350px; height: 350px; box-sizing: border-box; padding: 40px; background-color: #fff; text-align: center; box-shadow: 0 6px 6px rgba(0,0,0,0.2); border-radius: 20px; margin: 0 auto; }
+.loginBox .loginTitle{ color: #2A69FF; font-weight: bold; font-size: 30px; margin-bottom: 20px;}
+.loginBox input{ width: 100%; height: 40px; background-color: #f3f3f3; display: block; margin: 0 auto; margin-bottom: 10px; border-radius: 20px; box-sizing: border-box; padding: 5px 20px; font-size: 12px; }
+.loginBox .loginButton{ width: 100%; height: 40px; background-color: #2A69FF; box-shadow: 0 6px 6px rgba(0,0,0,0.2); color: #fff; display: block; margin: 0 auto; margin: 20px 0; border-radius: 20px; font-size: 20px; }
+.loginNotice{ color: #999; font-size: 13px; }
+.errorMsg{ color: red; font-size: 13px; }

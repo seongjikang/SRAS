@@ -1,0 +1,17 @@
+<body class="loginBody">
+    <div class="loginBox">
+        <div class="loginTitle">LOGIN</div>
+        <!-- 바인딩 -->
+        <form [formGroup]="form" (ngSubmit)="submit()" action="" class="loginForm"> 
+          <fieldset>
+            <!--form control과 바인딩-->
+            <input class="loginId" type="text" formControlName="userId" id="userId" name="userId" value="" placeholder="ID">
+            <span class="errorMsg" *ngIf="formErrors.userId">{{formErrors.userId}}</span>
+            <!--form control과 바인딩-->
+            <input class="loginPw" type="password" formControlName="password" id="password" name="password" value="" placeholder="PW">
+            <span class="errorMsg" *ngIf="formErrors.password">{{formErrors.password}}</span>
+            <input class="loginButton" type="submit" value="로그인">
+          </fieldset>
+        </form>
+    </div>
+</body>

@@ -1,0 +1,16 @@
+/* base */
+*{ margin: 0; padding: 0; font-size: 24px; color: #00230e; font-family: 'Noto Sans KR', sans-serif; }
+html, body{ width: 100%; height: 100%; }
+li{ list-style: none; }
+a{ text-decoration: none; }
+img{ border: none;}
+table{ border-collapse: collapse; border-spacing: 0px; }
+address{ font-style: normal; }
+fieldset{ border: none; }
+legend{ position: absolute; left: -999em; }
+input[type=button],input[type=submit],input[type=ressrt],input[type=image],button{ cursor:pointer; }
+label.away{ position: absolute; left: -999em; }
+form *{ border: none; }
+
+.commentSectionWrap{ width: 80%; height: 100%; background-color: #fff; margin: 0 auto; padding: 70px 0; }
+.commentSectionTop{ width: 100%; height: 40px; margin-bottom: 10px; height: 40px; font-size: 20px; color: #333; }

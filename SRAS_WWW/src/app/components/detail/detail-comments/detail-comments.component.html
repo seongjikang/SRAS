@@ -1,0 +1,14 @@
+<div [className]="'commentSectionWrap'">
+  <app-detail-reject
+    [currentReviewId]="currentReviewId"
+    [reviewAndReply]="reviewAndReply"
+    *ngIf="reviewAndReply && reviewAndReply.approveChk !== 'complete'"
+  ></app-detail-reject>
+  <div [className]="'commentSectionTop'">코멘트 달기</div>
+  <app-detail-comment-input
+    [currentReviewId]="currentReviewId"
+  ></app-detail-comment-input>
+  <app-detail-comment-list
+    [currentReviewId]="currentReviewId"
+  ></app-detail-comment-list>
+</div>
